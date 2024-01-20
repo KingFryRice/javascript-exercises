@@ -11,15 +11,14 @@ const sumAll = function(a, b) {
     num2 = b;
   }
 
+  if (a < 0 || b < 0) return "ERROR";
+  if (!Number.isInteger(a) || !Number.isInteger(b)) return "ERROR";
+
   let sum = 0;
 
   for (let i = num1; i <= num2; i++) {
-    if (num1 < 0 || num2 < 0) {
-      return "ERROR";
-    } else {  
-    sum += i;
+      sum += i;
     }
-  }
 
   return sum;
 
